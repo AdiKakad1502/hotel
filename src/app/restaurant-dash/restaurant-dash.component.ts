@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-restaurant-dash',
@@ -6,10 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./restaurant-dash.component.css']
 })
 export class RestaurantDashComponent implements OnInit {
-
-  constructor() { }
+formValue!: FormGroup;
+  constructor(private formbuilder: FormBuilder) { }
 
   ngOnInit(): void {
+    this.formValue = this.formbuilder.group({
+      name:[''],
+      email: [''],
+      phone: [''],
+      address: [''],
+      services: ['']
+    })
   }
 
 }
