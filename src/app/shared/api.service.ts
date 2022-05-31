@@ -13,8 +13,8 @@ postRestaurant(data: any){
   }))
 }
 
-getRestaurant(data: any){
-return this.http.get<any>("https://localhost:3000/posts",data).pipe(map((res:any)=>{
+getRestaurant(){
+return this.http.get<any>("https://localhost:3000/posts").pipe(map((res:any)=>{
   return res;
 }))
 }

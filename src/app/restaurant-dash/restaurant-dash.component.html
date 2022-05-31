@@ -31,16 +31,16 @@
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <td>1</td>
-            <td>Haveli</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+        <tr *ngFor="let data of allRestaurantData">
+            <td>{{data.id}}</td>
+            <td>{{data.name}}</td>
+            <td>{{data.email}}</td>
+            <td>{{data.phone}}</td>
+            <td>{{data.address}}</td>
+            <td>{{data.service}}</td>
             <td>
-                <button class="btn btn-info">Edit</button>&nbsp;
-                <button class="btn btn-danger">Delete</button>
+                <button (click) = "onEditResto(data)" type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal">Edit</button>&nbsp;
+                <button class="btn btn-danger" (click) = "deleteResto(data)">Delete</button>
             </td>
         </tr>
     </tbody>
@@ -69,7 +69,7 @@
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Phone no.</label>
-                        <input type="tel" formControlName="phone" class="form-control" placeholder="Phone no."
+                        <input type="text" formControlName="phone" class="form-control" placeholder="Phone no."
                             id="exampleInputPassword1">
                     </div>
                     <div class="mb-3">
@@ -84,8 +84,9 @@
                 </form>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Add details</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" >Clear</button>
+                <button type="button" class="btn btn-primary" (click)="addRestaurant()">Add details</button>
+                <button type="button" class="btn btn-primary" (click)="onUpdateResto()">Update details</button>
             </div>
         </div>
     </div>
