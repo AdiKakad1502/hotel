@@ -65,6 +65,8 @@ this.api.deleteRestaurant(data.id).subscribe(res => {
 })
   }
   onEditResto(data: any) {
+    this.showAdd = false;
+    this.showbtn = true;
     this.restaurantModelObj.id = data.id;
     this.formValue.controls['name'].setValue(data.name);
     this.formValue.controls['email'].setValue(data.email);

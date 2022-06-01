@@ -2,17 +2,18 @@
     <div class="container-fluid">
         <h2>Restaurant Record App</h2>
         <div class="d-flex">
-            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">Add
+            <button (click)="clickAddResto()" type="button" class="btn btn-success" data-toggle = "modal"
+                data-target= "myModal">Add
                 Restaurant</button>
         </div>
     </div>
 </nav>
 <!--Jumbotron-->
-<div class="p-5\mb-4 bg-light rounded-3">
+<div class="p-5 mb-4 bg-light rounded-3 jumbotron">
     <div class="container-fluid py-5">
         <h1 class="display-5 fw-bold">Restaurant Records Management</h1>
         <p class="col-md-8 fs-4">You can save records of Restaurant using Angular</p>
-        <a class="btn btn-primary btn-lg" target="_blank" type="button"
+        <a class="btn btn-primary btn-lg text-center" target="_blank" type="button"
             href="https://github.com/AdiKakad1502/hotel.git">Here We Go</a>
     </div>
 </div>
@@ -39,8 +40,9 @@
             <td>{{data.address}}</td>
             <td>{{data.service}}</td>
             <td>
-                <button (click) = "onEditResto(data)" type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal">Edit</button>&nbsp;
-                <button class="btn btn-danger" (click) = "deleteResto(data)">Delete</button>
+                <button (click)="onEditResto(data)" type="button" class="btn btn-info" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal">Edit</button>&nbsp;
+                <button class="btn btn-danger" (click)="deleteResto(data)">Delete</button>
             </td>
         </tr>
     </tbody>
@@ -48,7 +50,7 @@
 
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div id="myModal" class="modal fade" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -84,10 +86,17 @@
                 </form>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" >Clear</button>
-                <button type="button" class="btn btn-primary" (click)="addRestaurant()">Add details</button>
-                <button type="button" class="btn btn-primary" (click)="onUpdateResto()">Update details</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Clear</button>
+                <button *ngIf="showAdd" type="button" class="btn btn-primary" (click)="addRestaurant()">Add
+                    details</button>
+                <button *ngIf="showbtn" type="button" class="btn btn-primary" (click)="onUpdateResto()">Update
+                    details</button>
             </div>
         </div>
     </div>
 </div>
+<script>
+    $(document).ready(function () {
+        $("#exampleModal").modal();
+    });
+</script>
