@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md6">
+            <div class="card">
+                <div class="text-center">
+                    <h1>Restaurant Registration</h1>
+                    <h5>Feel Free to Register</h5><hr>
+                </div>
+                <form [formGroup]="signupForm" (ngSubmit)="signUp()">
+                    <div class="mb-3">
+                        <label class="form-label">Name</label>
+                        <input type="text" formControlName="name" class="form-control" placeholder="Enter Name" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Mobile No.</label>
+                        <input type="text" formControlName="mobile" class="form-control" placeholder = "Enter Mobile No." id="exampleInputEmail1" aria-describedby="emailHelp">
+                        
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Email address</label>
+                        <input formControlName="email" type="email" class="form-control" placeholder="Enter Email ID" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Password</label>
+                        <input formControlName="password" type="password"  placeholder = "Password" class="form-control" id="exampleInputPassword1">
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Register</button>
+                </form>
+                <a  class = "buton" routerLink="/login">Already a member ? Click to Login !!</a>
+            </div>
+        </div>
+    </div>
+</div>

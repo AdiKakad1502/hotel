@@ -1,10 +1,10 @@
-h2{
-    color:aliceblue;
+h2 {
+color: aliceblue;
 }
-.slider{
-    width:100%;
-    height:450px;
+.slider {
+width: 100%;
+height: 450px;
 }
-.jumbotron{
-    
+.jumbotron {
+background-image: linear-gradient(rgba(0, 0, 0, .3), rgb(0, 0, 0, .7)),url(https://www.google.com/imgres?imgurl=https%3A%2F%2Fimages.pexels.com%2Fphotos%2F262978%2Fpexels-photo-262978.jpeg%3Fcs%3Dsrgb%26dl%3Dpexels-pixabay-262978.jpg%26fm%3Djpg&imgrefurl=https%3A%2F%2Fwww.pexels.com%2Fsearch%2Frestaurant%2F&tbnid=BJcE9wzxzqXDNM&vet=12ahUKEwiDiqzsqYv4AhVr43MBHXDoDnEQMygBegUIARDdAQ..i&docid=ayRO4X2syV2QNM&w=5616&h=3744&q=restaurant%20images&ved=2ahUKEwiDiqzsqYv4AhVr43MBHXDoDnEQMygBegUIARDdAQ);
 }
